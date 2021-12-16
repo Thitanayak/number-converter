@@ -2,8 +2,7 @@ package com.util.number.converter;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ConverterApplicationTests {
 
@@ -25,6 +24,12 @@ class ConverterApplicationTests {
 	@Test
 	void romanToArabicExceptionTest() {
 		assertThrows(IllegalArgumentException.class, () -> ConverterApplication.romanToArabic("ghggoou"));
+	}
+
+	@Test
+	void updateRomanList(){
+		ConverterApplication.setNewRomanNumber(10000,"K");
+		assertEquals(14,ConverterApplication.romanNumeralsMap.size());
 	}
 
 }

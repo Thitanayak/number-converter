@@ -16,28 +16,26 @@ public class ConverterApplication {
 
 	private static final int arabicLowerLimit = 0;
 
-	private static  Map<Integer, String> romanNumeralsMap;
+	public static  Map<Integer, String> romanNumeralsMap = new HashMap<>();
 
 	public static void setNewRomanNumber(int arabicNumber, String romanNumber) {
 		romanNumeralsMap.put(arabicNumber,romanNumber);
 	}
 
 	static {
-		Map<Integer,String> aMap = new HashMap<>();
-		aMap.put(1, "I");
-		aMap.put(4, "IV");
-		aMap.put(5, "V");
-		aMap.put(9, "IX");
-		aMap.put(10, "X");
-		aMap.put(40, "XL");
-		aMap.put(50, "L");
-		aMap.put(90, "XC");
-		aMap.put(100, "C");
-		aMap.put(400, "CD");
-		aMap.put(500, "D");
-		aMap.put(900, "CM");
-		aMap.put(1000, "M");
-		romanNumeralsMap = Collections.unmodifiableMap(aMap);
+		romanNumeralsMap.put(1, "I");
+		romanNumeralsMap.put(4, "IV");
+		romanNumeralsMap.put(5, "V");
+		romanNumeralsMap.put(9, "IX");
+		romanNumeralsMap.put(10, "X");
+		romanNumeralsMap.put(40, "XL");
+		romanNumeralsMap.put(50, "L");
+		romanNumeralsMap.put(90, "XC");
+		romanNumeralsMap.put(100, "C");
+		romanNumeralsMap.put(400, "CD");
+		romanNumeralsMap.put(500, "D");
+		romanNumeralsMap.put(900, "CM");
+		romanNumeralsMap.put(1000, "M");
 	}
 
 	 public  static String arabicToRoman(int input){
